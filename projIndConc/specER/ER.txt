@@ -38,7 +38,7 @@ Atores{
     departamento de vendas,
     departamento de compras,
     departamento de recebimentos,
-    encoregador de produção,
+    encarregado de produção,
     encarregado de almoxarifado e estocagem,
     operador das maquinas,
     auxiliares,

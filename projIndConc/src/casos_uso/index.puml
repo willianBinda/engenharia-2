@@ -1,0 +1,46 @@
+@startuml Inc_conc
+left to right direction
+actor Planta as pl
+actor Cliente as Cl
+actor Representante as Re
+actor Transportadora as Tr
+actor Departamento_vendas as DpV
+actor Departamento_compras as DpC
+actor Departamento_recebimentos as DpR
+actor Departamento_finaceiro as DpF
+actor Encarregado_produção as EnP
+actor Encarregado_almoxarifado as EnA
+actor Operador_maquinas as OpM
+actor Alxiliares as Alx
+actor Operarios as Op
+
+package Ind_conc{
+  usecase "Armazenar Produtos" as UC1
+  usecase "Produzir concreto" as UC2
+  usecase "Preencher \n ordem de pedido" as UC3
+  usecase "Escalonar ordem" as UC4
+  usecase "Enviar ordem \n para produção" as UC5
+  usecase "Executar pedido" as UC6
+  usecase "Emitir ordem de compra " as UC7
+  usecase "Verificar recebimento" as UC8
+  usecase "Fabricar produto" as UC9
+  usecase "Entregar produto" as UC10
+  usecase "Efetuar pagamento" as UC11
+}
+
+' Funcionario <|-- F
+' Funcionario <|-- SA
+' Funcionario <|-- CH
+
+' Funcionario -- UC1
+' UC2 .> UC1 : include
+' Funcionario -- UC2
+' Funcionario <- UC4
+' UC3 .> UC2 : include
+' RH -- UC3
+' UC4 -- RH
+' UC4 .> UC3: include
+' UC5 <- CH
+' UC5 -> SA
+
+@enduml

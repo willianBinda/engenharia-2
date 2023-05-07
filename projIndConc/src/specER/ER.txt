@@ -10,6 +10,7 @@ A planta é composta de vários receptáculos de armazenagem de cimento, areia, 
 um misturador para preparação do concreto; duas balanças para pesar os componentes; 
 uma válvula de medição de componentes; controle de descarga de água; 
 duas esteiras de transporte para levar os ingredientes sólidos ao misturador.
+
 Os clientes preenchem uma ordem de pedido entregue pelo representante com o tipo e quantidade de concreto
 para entrega em um ou mais dias pela transportadora da empresa. O departamento de vendas escalona a ordem 
 e eventualmente encaminha a indústria para o encarregado de produção. A indústria providência a execução 
@@ -31,46 +32,31 @@ construção e o cliente efetua o pagamento que é recebido pelo departamento fi
 -Controlas as compras de matéria prima 
 
 Atores{
-    planta,
     clientes,
-    representate,
-    transportadora,
     departamento de vendas,
     departamento de compras,
     departamento de recebimentos,
+    departamento finaceiro.
     encarregado de produção,
     encarregado de almoxarifado e estocagem,
     operador das maquinas,
-    auxiliares,
     operarios,
-    departamento finaceiro.
+    transportadora,
 }
 
 Ações{
-    armazenar produto{
-        cimento,
-        cascalho,
-        areia,
-        Àgua
-    },
-    produzir concreto{
-        transportar ingredientes{
-            pesar componentes,
-            medir componentes,
-            dosagem de àgua,
-        }
-    },
-    preencher ordem de pedido,
-    escalonar ordem,
-    enviar ordem para produção,
-    executar pedido,
-    solicitar materiais,
-    executar fabricação,
-    emitir ordem de compra de materiais para produção,
-    verificar recebimento,
-    fabricar produto,
-    entregar na contrução,
-    efetuar pagamento
+    Preencher ordem pedido
+    Escalonar ordem
+    Enviar ordem para produção
+    Solicitar materiais
+    Entregar materiais
+    Executar pedido
+    Controlar fabricação
+    Misturar componentes
+    Emitir ordem de compra produdos
+    Verificar recebimento
+    Entregar produto
+    Efetuar pagamento
 }
 
 Objetos{

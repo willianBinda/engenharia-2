@@ -1,46 +1,64 @@
 @startuml Inc_conc
 left to right direction
-actor Planta as pl
+
 actor Cliente as Cl
-actor Representante as Re
-actor Transportadora as Tr
+
 actor Departamento_vendas as DpV
 actor Departamento_compras as DpC
-actor Departamento_recebimentos as DpR
 actor Departamento_finaceiro as DpF
+actor Departamento_recebimentos_Distribuicao as DpR 
+' departamento ou setor ?
 actor Encarregado_produção as EnP
 actor Encarregado_almoxarifado as EnA
+
 actor Operador_maquinas as OpM
-actor Alxiliares as Alx
 actor Operarios as Op
+actor Transportadora as Tr
 
 package Ind_conc{
-  usecase "Armazenar Produtos" as UC1
-  usecase "Produzir concreto" as UC2
-  usecase "Preencher \n ordem de pedido" as UC3
-  usecase "Escalonar ordem" as UC4
-  usecase "Enviar ordem \n para produção" as UC5
+  usecase "Preencher ordem\n pedido" as UC1
+  usecase "Escalonar ordem" as UC2
+  usecase "Enviar ordem \n para produção" as UC3
+  usecase "Solicitar materiais" as UC4
+  usecase "Entregar materiais" as UC5
   usecase "Executar pedido" as UC6
-  usecase "Emitir ordem de compra " as UC7
-  usecase "Verificar recebimento" as UC8
-  usecase "Fabricar produto" as UC9
-  usecase "Entregar produto" as UC10
-  usecase "Efetuar pagamento" as UC11
+  usecase "Controlar fabricação" as UC7
+  usecase "Misturar componentes" as UC8
+  usecase "Emitir ordem de compra produdos" as UC9
+  usecase "Verificar recebimento" as UC10
+  usecase "Entregar produto" as UC11
+  usecase "Efetuar pagamento" as UC12
 }
 
-' Funcionario <|-- F
-' Funcionario <|-- SA
-' Funcionario <|-- CH
+Departamento <|-- DpV 
+Departamento <|-- DpC
+Departamento <|-- DpR
+Departamento <|-- DpF
 
-' Funcionario -- UC1
-' UC2 .> UC1 : include
-' Funcionario -- UC2
-' Funcionario <- UC4
-' UC3 .> UC2 : include
-' RH -- UC3
-' UC4 -- RH
-' UC4 .> UC3: include
-' UC5 <- CH
-' UC5 -> SA
+Encarregado <|-- EnP
+Encarregado <|-- EnA
+
+Cl -- UC1
+UC2 -- Departamento
+UC3 -- Departamento
+UC4 -- Encarregado
+UC5 -- Encarregado
+UC6 -- Encarregado
+UC7 -- OpM
+UC8 -- Op
+UC9 -- Encarregado
+UC10 -- Departamento
+Cl --- UC12
+Tr -- UC11
+UC12 ---> Departamento
+UC2 .> UC1 : <<Include>>
+UC3 .> UC2 : <<Include>>
+UC6 .> UC5 : <<Include>>
+UC5 .> UC4 : <<Include>>
+UC7 .> UC6 : <<Include>>
+UC8 .> UC7 : <<Include>>
+UC10 .> UC9 : <<Include>>
+UC11 .> UC6 : <<Include>>
+UC12 .> UC11 : <<Include>>
 
 @enduml

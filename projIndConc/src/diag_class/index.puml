@@ -1,0 +1,39 @@
+@startuml Inc_conc
+
+class Cliente
+class Fabrica
+class Venda
+class Compra
+class Recebimento
+class Financeiro
+class Planta 
+class Escritório
+class Departamento 
+
+class Pedido {
+ +tipo_pagamento: String
+ +tipo_concreto: String
+ +quantidade: String
+}
+class Armazem{
+    +tipo_produto:String
+    +quantidade:int
+}
+class Equipamento{
+    +tipo_equipamento:String
+}
+class Transportadora
+
+Cliente "0..*" -- "0..*" Pedido : realiza
+Pedido "1..*" -- "1..*" Transportadora : entrega
+
+Departamento <|-- Venda
+Departamento <|-- Compra
+Departamento <|-- Recebimento
+Departamento <|-- Financeiro
+Fabrica <|-- Departamento
+Fabrica <|-- Escritório
+Fabrica <|-- Planta
+Planta <|-- Armazem
+Planta <|-- Equipamento
+@enduml

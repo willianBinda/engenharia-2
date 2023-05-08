@@ -62,17 +62,22 @@ Ações{
 Objetos{
     pedido{
         pagamento,
-        tipo de produto,
+        tipo de concreto,
         quantidade,
     },
     cliente,
     planta{
-        estoque,
-        equipamentos,
+        armagem{
+            tipo de produto,
+            quantidade
+        },
+        equipamentos{
+            tipo de equipamento
+        },
     },
     departamento{
         tipo do departamento
     },
-    transportadora,
+    transportadora
 }
 

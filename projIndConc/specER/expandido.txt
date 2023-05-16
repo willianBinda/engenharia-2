@@ -47,6 +47,7 @@ Fluxo alternativo:
 
 Pós-condições: O produto é entregue ao cliente e o status do pedido é atualizado no sistema.
 
+"ctrl -" para visualizar melhor
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Caso de Uso: Preencher ordem de pedido                                                                                                                                                    |

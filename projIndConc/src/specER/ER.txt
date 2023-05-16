@@ -23,13 +23,42 @@ providenciar o pedido da mercadoria que após a entrega é verificado pelo setor
 distribuição se está entregue conforme foi feito o pedido. Após a fabricação, o produto é entregue na 
 construção e o cliente efetua o pagamento que é recebido pelo departamento financeiro da indústria.
 
-2-Requisitos básicos(o que o sistema deve fazer)
+2.0 Requisitos Básicos
+O sistema deve ser capaz de realizar as seguintes funcionalidades:
 
--Controlar a produção
--Atender as demandas de pedidos
--Controlar a matéria prima
--Controlar a entrega de concreto
--Controlas as compras de matéria prima 
+2.1 Controle de Produção
+
+Registrar e acompanhar as ordens de produção, desde o recebimento até a entrega do concreto.
+Monitorar o progresso da produção e o status de cada ordem de produção.
+Manter um registro histórico das ordens de produção.
+
+2.2 Atendimento de Pedidos
+
+Permitir que os clientes preencham uma ordem de pedido com informações detalhadas, como tipo e quantidade de concreto desejado.
+Escalonar as ordens de pedido recebidas pelo departamento de vendas.
+Encaminhar as ordens de pedido para o encarregado de produção na planta industrial.
+
+2.3 Controle de Matéria Prima
+
+Controlar os estoques de cimento, areia, cascalho e água nos receptáculos de armazenagem.
+Emitir ordens de compra para reposição de matéria prima quando o nível de segurança for atingido.
+Verificar a entrega da matéria prima e realizar a conferência com o pedido efetuado.
+
+2.4 Controle de Entrega de Concreto
+
+Agendar a entrega do concreto de acordo com as solicitações dos clientes.
+Coordenar a logística de transporte e roteamento para a entrega dos pedidos.
+Registrar as informações de entrega e confirmação do cliente.
+
+2.5 Controle de Compras de Matéria Prima
+
+Emitir ordens de compra para aquisição de matéria prima quando necessário.
+Acompanhar o status das ordens de compra e notificar sobre eventuais atrasos ou problemas.
+
+3.0 Considerações Finais
+O sistema proposto visa proporcionar um controle eficiente da produção, 
+atendimento aos pedidos, gestão de matéria prima, controle de entrega de concreto e compras de matéria prima.
+Através do uso adequado do sistema, espera-se otimizar os processos e melhorar a eficiência operacional da fábrica de concreto.
 
 Atores{
     clientes,
@@ -80,4 +109,3 @@ Objetos{
     },
     transportadora
 }
-

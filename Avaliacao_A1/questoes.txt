@@ -1,0 +1,51 @@
+questão 1.
+
+O passo mais essencialmente orientado a objetos na análize ou na investigação é a decomposição
+do problema em conceitos e objetos individuais - as coisas nas quais mais estamos interessados. 
+Um modelo conceitual é uma representação de conceitos em um dominio, do problema. O modelo conceitual pode mostrar: 
+A) conceitos, associacoes, atributos.
+B)Metodos,proceduras e functions.
+C)Nenhuma das respostas.
+D)Atributos, metodos e funcoes
+
+Resposta: A
+
+questão 2.
+
+Modelo ER:
+o cliente faz pedido online acessando o sistema e selecionando os produtos que deseja comprar. O cliente adiciona os produtos
+no carinho e verifica o carrinho. O CIiente confirma o pedido e insere os dados de pagamento. A loja processa o pagamete
+confirma o pedido e envia ume-mail de confirmação para o cliente. O cliente acompanha o status do pedido.O Funcionario da loja
+gerencia os pedidos e atualiza o status đo pedido. O cliente acessa o sistema e executa à opção "Acompanhar Pedido". A loja
+axibe O status atual do pedido (processando, em trânsito, entregue). A loja permite que o cliente visualize as informações do 
+pedido (produtos, data de entrega). O funcionário da loja gerencia os pedidos executando a opcão "Gerenciar Pedidos".A loja exibe a lista de todos os pedidos. O funcionário seleciona um pedido e pode visualizar as informacoes do pedido produtos, cliente .). O funcionário pode atualizar o status do pedido (processando, em trânsito, entregue). O Funcionário da loja atualiza
+o status do pedido. O funcionàrio executa a opção "Atualizar Status do Pedido". A loja exibe uma lista de todos os pedidos. O
+funcionário seleciona um pedido e atualiza o status do pedido (processando, em trânsito, entregue).
+
+casos de uso e domínio
+
+questão 3.
+
+Durante a fase de levantamento de requisitos do sistema financeiro do banco SOUJUROS, 
+o analista percebeu a necessidade do cliente consultar sua conta. No inicio da consulta da conta,
+deve ser verificado a identidade do cliente. O Banco solicitou a utilização de dados biometricos para 
+realizar essa identificação. Deve -se listar a necessidade de utilização de dados biometricos como :
+A)Nenhuma das alternativas. 
+B)Padrão de arquitetura. 
+C)Requisito funcional. 
+D)Regra de negocio. 
+E)requisito nao funcional.
+
+resposta : E
+
+questão 4.
+
+Analize as alternativas e responda as corretas sobre a engenharia de software: 
+1)A analize de requisitos é responsavel pela especificação do requisitos de software e
+hardware que serão utilizados durante o processo de desenvolvimento de um sistema. 
+2)A analize de requisitos define a metodologia de programação a ser utilizada no desenvolvimento de sistema. 
+3) A especificação de requisitos fornece ao desenvolvedor e ao cliente os parametros para avaliar a qualidade logo que o sistema for construído. 
+4) A analise de requisitos possibilita que o engenheiro de sotware especifique a função e o desempenho do sistema e estabeleça 
+quais são as restrições de projeto que o sistema deve atender.
+
+resposta: 3 e 4

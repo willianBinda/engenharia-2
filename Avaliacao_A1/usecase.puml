@@ -1,0 +1,33 @@
+@startuml will
+
+left to right direction
+skinparam packageStyle rectangle
+
+actor Cliente
+actor Funcionário
+
+rectangle "Sistema de Pedidos Online" {
+  usecase "Fazer Pedido" as UC1
+  usecase "Verificar Carrinho" as UC2
+  usecase "Confirmar Pedido" as UC3
+  usecase "Inserir Dados de Pagamento" as UC4
+  usecase "Processar Pagamento" as UC5
+  usecase "Enviar Email de Confirmação" as UC6
+  usecase "Acompanhar Pedido" as UC7
+  usecase "Gerenciar Pedidos" as UC8
+  usecase "Visualizar Informações do Pedido" as UC9
+  usecase "Atualizar Status do Pedido" as UC10
+
+  Cliente -- UC1
+  Cliente -- UC2 
+  Cliente -- UC3 
+  Cliente -- UC4 
+  UC4 <-- UC5: include
+  UC5 <-- UC6: include
+  Cliente -- UC7
+  Cliente -- UC9
+  Funcionário -- UC8
+  Funcionário -- UC10
+}
+
+@enduml

@@ -1,0 +1,27 @@
+@startuml dominio
+
+class "Pedido" {
+  status
+  produtos
+  cliente
+}
+
+class "Produto" {
+  nome
+  preco
+}
+
+class "Cliente" {
+  nome
+  email
+}
+
+class "Funcionário" {
+  nome
+}
+
+Cliente "1..*" -- "1..*" Pedido: pode fazer
+Pedido "1..*" -- "1..*" Produto: contem
+Funcionário "1..*" -- "1..*" Pedido : pode gerenciar
+
+@enduml

@@ -22,8 +22,8 @@ rectangle "Sistema de Pedidos Online" {
   Cliente -- UC2 
   Cliente -- UC3 
   Cliente -- UC4 
-  UC4 <-- UC5: include
-  UC5 <-- UC6: include
+  UC4 <.. UC5: <<include>>
+  UC5 <.. UC6: <<include>>
   Cliente -- UC7
   Cliente -- UC9
   Funcionário -- UC8

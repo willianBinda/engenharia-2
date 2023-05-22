@@ -19,6 +19,11 @@ rectangle "Sistema de Pedidos Online" {
   usecase "Atualizar Status do Pedido" as UC10
 
   Cliente -- UC1
+  UC1 <.. UC2: <<extend>>
+  UC1 <.. UC9: <<include>>
+  UC1 <.. UC3: <<include>>
+  UC3 <.. UC7: <<include>>
+  UC3 <.. UC4: <<include>>
   Cliente -- UC2 
   Cliente -- UC3 
   Cliente -- UC4 
@@ -28,6 +33,8 @@ rectangle "Sistema de Pedidos Online" {
   Cliente -- UC9
   Funcionário -- UC8
   Funcionário -- UC10
+  UC10 ..> UC5: <<Include>> 
+  UC8 ..> UC5: <<Include>> 
 }
 
 @enduml
